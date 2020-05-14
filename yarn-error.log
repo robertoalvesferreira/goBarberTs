@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add reflect-metada
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add jsonwebtoken
 
 PATH: 
   /home/roberto/.composer/vendor/bin:/home/roberto/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/roberto/Android/Sdk/tools:/home/roberto/Android/Sdk/platform-tools
@@ -14,17 +14,8 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/reflect-metada: Not found
-      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66947:18)
-      at Request.self.callback (/usr/share/yarn/lib/cli.js:140665:22)
-      at Request.emit (events.js:223:5)
-      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141637:10)
-      at Request.emit (events.js:223:5)
-      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141559:12)
-      at Object.onceWrapper (events.js:312:28)
-      at IncomingMessage.emit (events.js:228:7)
-      at endReadableNT (_stream_readable.js:1185:12)
-      at processTicksAndRejections (internal/process/task_queues.js:81:21)
+  Error: connect ECONNREFUSED 35.198.148.65:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16)
 
 npm manifest: 
   {
@@ -38,9 +29,12 @@ npm manifest:
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
     },
     "dependencies": {
+      "@types/bcryptjs": "^2.4.2",
+      "bcryptjs": "^2.4.3",
       "date-fns": "^2.12.0",
       "express": "^4.17.1",
       "pg": "^8.1.0",
+      "reflect-metadata": "^0.1.13",
       "typeorm": "^0.2.24",
       "uuidv4": "^6.0.8"
     },
@@ -87,6 +81,11 @@ Lockfile:
       "@babel/helper-validator-identifier" "^7.9.0"
       chalk "^2.0.0"
       js-tokens "^4.0.0"
+  
+  "@types/bcryptjs@^2.4.2":
+    version "2.4.2"
+    resolved "https://registry.yarnpkg.com/@types/bcryptjs/-/bcryptjs-2.4.2.tgz#e3530eac9dd136bfdfb0e43df2c4c5ce1f77dfae"
+    integrity sha512-LiMQ6EOPob/4yUL66SZzu6Yh77cbzJFYll+ZfaPiPPFswtIlA/Fs1MzdKYA7JApHU49zQTbJGX3PDmCpIdDBRQ==
   
   "@types/body-parser@*":
     version "1.19.0"
@@ -350,6 +349,11 @@ Lockfile:
     version "1.3.1"
     resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.3.1.tgz#58ece8cb75dd07e71ed08c736abc5fac4dbf8df1"
     integrity sha512-mLQ4i2QO1ytvGWFWmcngKO//JXAQueZvwEKtjgQFM4jIK0kU+ytMfplL8j+n5mspOfjHwoAg+9yhb7BwAHm36g==
+  
+  bcryptjs@^2.4.3:
+    version "2.4.3"
+    resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
+    integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
   
   body-parser@1.19.0:
     version "1.19.0"
