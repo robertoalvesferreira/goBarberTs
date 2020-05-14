@@ -1,5 +1,5 @@
 import { startOfHour } from 'date-fns';
-
+import { hash } from 'bcryptjs';
 import { getCustomRepository } from 'typeorm';
 import Appointment from '../models/Appointment';
 import AppointmentsRepository from '../repositories/AppointmentsRepository';
