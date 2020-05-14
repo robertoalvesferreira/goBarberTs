@@ -15,10 +15,10 @@ class User {
   name: string;
 
   @Column()
-  password: string;
+  email: string;
 
-  @Column('time with time zone')
-  date: Date;
+  @Column()
+  password: string;
 
   @CreateDateColumn()
   created_at: Date;
